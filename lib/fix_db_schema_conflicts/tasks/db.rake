@@ -14,7 +14,7 @@ namespace :db do
       autocorrect_config = '.rubocop_schema.77.yml'
       rubocop_yml = File.expand_path("../../../../#{autocorrect_config}", __FILE__)
 
-      `bundle exec rubocop --a --config #{rubocop_yml} #{filename.shellescape}`
+      `bundle exec rubocop -a --config #{rubocop_yml} #{filename.shellescape}`
     end
   end
 end
