@@ -11,7 +11,7 @@ namespace :db do
       else
         "#{Rails.root}/db/schema.rb"
       end
-      autocorrect_config = FixDBSchemaConflicts::AutocorrectConfiguration.load
+      autocorrect_config = '.rubocop_schema.77.yml'
       rubocop_yml = File.expand_path("../../../../#{autocorrect_config}", __FILE__)
       auto_correct_arg = if Gem.loaded_specs['rubocop'].version >= Gem::Version.new('1.30')
         'autocorrect'
