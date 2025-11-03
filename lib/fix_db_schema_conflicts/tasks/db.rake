@@ -13,13 +13,8 @@ namespace :db do
       end
       autocorrect_config = '.rubocop_schema.77.yml'
       rubocop_yml = File.expand_path("../../../../#{autocorrect_config}", __FILE__)
-      auto_correct_arg = if Gem.loaded_specs['rubocop'].version >= Gem::Version.new('1.30')
-        'autocorrect'
-      else
-        'auto-correct'
-      end
 
-      `bundle exec rubocop --#{auto_correct_arg} --config #{rubocop_yml} #{filename.shellescape}`
+      `bundle exec rubocop --a --config #{rubocop_yml} #{filename.shellescape}`
     end
   end
 end

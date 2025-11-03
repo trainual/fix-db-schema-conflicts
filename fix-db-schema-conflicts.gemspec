@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rails', '~> 4.2.0'
   spec.add_development_dependency 'sqlite3', '~> 1.3.0'
 
-  spec.add_dependency 'rubocop', '>= 1.80.0'
+  spec.add_dependency 'rubocop', '1.80.2'
 
   spec.required_ruby_version = '>= 2.0.0', '< 4'
 end
